@@ -1,0 +1,1187 @@
+
+.hidden {
+    display: none;
+}
+  
+  .visible {
+    display: flex;
+}
+  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: black;
+}
+#body_bar{
+    max-width: 100%;
+    height: 56px; 
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top:0;
+    #bar{
+        width: 40%;
+        height: 56px;
+        background-color: white;
+        /* border-bottom: solid black 2px; */
+        box-shadow: 2px 2px 5px rgb(120, 115, 115);
+        /* background-color: red; */
+        
+        display: flex;
+        border-radius:50px;
+        #bar_left{
+            width: 40%;
+            height: 56px;
+            display: flex;
+            /* background-color: lightcoral; */
+            align-items: center;
+            padding-left: 12px;
+            #head{
+                font-family:"Cal Sans", sans-serif;
+                font-size: 25px;
+                display: inline;
+                padding: 5px;
+                background: linear-gradient(90deg, rgb(68, 68, 244), rgb(159, 49, 238));
+                background-clip: text;
+                -webkit-text-fill-color:transparent;
+            }
+        }
+        #bar_right{
+            width: 70%;
+            height: 56px;
+            display: flex;
+            align-items: center; /* ให้ปุ่มอยู่กลางแนว y */
+            justify-content: center;
+            /* background-color: blue; */
+           
+            
+            
+            /* padding-left: 148px; */
+                #area_button{
+                    
+                    /* background-color: aquamarine; */
+                    display: flex;
+                    gap: 10px;
+                    /* margin-left: 12.5%; */
+                    align-items: center;
+                        
+
+                    #a_aboutme,#a_education,#a_skills,#a_project,#a_contact{
+                        height: 56px;
+                        /* import */
+                        color: black;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                     
+                    }
+                }
+            
+        }
+    
+       
+    }
+}
+
+
+#blank{
+    max-width: 100%;
+    height: 8px;
+    
+}
+
+#Introduce{
+    max-width: 100%;
+    height: 544px;
+    background-color: black;
+    #introduce_part1{
+        width: 100%;
+        height: 50%;
+        /* background-color: hotpink; */
+        display: flex;
+        justify-content: center;
+        align-items:end;
+        #Meimg{
+            width: 12%;
+            height: 70%;
+            border-radius: 50%;
+        }
+    }
+    #introduce_part2{
+        width: 100%;
+        height: 50%;
+        /* background-color: chocolate; */
+        display: flex;
+        flex-direction: column;
+        justify-content:baseline;
+        align-items:center;
+        #mename{
+            
+            font-size: 48px;
+            margin: 0px;
+            display: inline;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 400;
+            background: linear-gradient(90deg, blue, indigo);
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
+        }
+        
+        #front{
+           
+            font-size:32px;
+            margin: 0px;
+            display: inline;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 400;
+            background: linear-gradient(90deg, blue, indigo);
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
+        }
+    }
+
+}
+#about_me{
+    max-width:100%;
+    height:608px;
+    /* background-color: pink; */
+    display: flex;
+
+    #intro_text{
+        /* no max- */
+        width:50%;
+        height:608px;
+        /* background-color:blueviolet; */
+        #about{
+            font-size:48px;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 50px;
+            background: linear-gradient(90deg,rgb(192, 242, 57),rgb(0, 238, 255));
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
+            display: inline;
+            
+        }
+      
+        
+        #area_aboutme{
+            height: 60%;
+            width:75%;
+            /* background-color: powderblue; */
+            margin-left: 50px;
+            border:solid powderblue 2px ;
+            border-radius: 30px;
+            /* display: flex;
+            flex-direction: column; */
+            #part1text_aboutme{
+                width: 90%;
+                height: 55%;
+                /* background-color:gold; */
+                text-indent: 50px;
+                text-align: justify;
+                margin-top: 30px;
+                
+                #text_aboutme_p1{
+                    color: white;
+                    font-family: "Cal Sans", sans-serif;
+                    font-size: 25px;
+                    display: inline;
+                   
+                }
+            }
+            
+            #part2text_aboutme{
+                width: 90%;
+                height: 45%;
+                /* background-color:chocolate; */
+                text-indent: 50px;
+                #text_aboutme_p2{
+                    color: white;
+                    font-family: "Cal Sans", sans-serif;
+                    font-size: 25px;
+                    display: inline;
+                }
+            }
+
+        }
+    }
+
+    #intro_img{
+        width:50%;
+        height:608px;
+        background-color:orange;
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+        #Me{
+            width:50%;
+            height:70%; 
+            border-radius: 30px;
+        }
+    }
+}
+
+#education{
+    max-width:100%;
+    height:608px;
+    /* background-color:brown; */
+    display: flexbox ;
+
+    #part1_edu{
+        max-width: 100%;
+        height: 100px;
+        /* background-color: blanchedalmond; */
+        text-align: center;
+
+        
+        #head_educationn{
+            font-size:48px;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 50px;
+            background: linear-gradient(90deg,rgb(192, 242, 57),rgb(0, 238, 255));
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
+            align-items: center;
+            display: inline;
+        }
+       
+    }
+    
+    #educat_1{
+        max-width: 100%;
+        height: 216px;
+        background-color: black;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center; 
+        padding-left: 12.5%;
+        #boder_educat_1{
+            width:880px;
+            height: 184px;
+            background-color: aliceblue;
+            border: solid white 5px;
+            border-radius: 27px;
+            display: flex;
+
+            #icon_school{
+                max-width:24%;
+                height: 184px;
+                /* background-color: aqua; */
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                #img_iconschool{
+                    height: 152px;
+                    width:160px;       
+                }
+            }
+            #text_school{
+                max-width: 728px;
+                height:184px;
+                margin-left: 10px;
+                padding-top: 24px;
+                #high_school{
+                    font-size: 32px;
+                    display:inline;
+                }
+                #name_school{
+                    font-size: 18px;
+                    color: rgb(47, 0, 255);
+                    display:inline;
+                }
+
+                #gpa_school{
+                    font-size: 18px;
+                    color: rgb(47, 0, 255);
+                    display:inline;
+                }
+            }
+            
+           
+        }
+        
+    }
+
+    #educat_2{
+        max-width: 100%;
+        height: 216px;
+        background-color: black;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center; 
+        padding-left: 12.5%;
+        #boder_educat_2{
+            width:880px;
+            height: 184px;
+            background-color: aliceblue;
+            border: solid white 5px;
+            border-radius: 27px;
+            display: flex;
+
+            #icon_university{
+                max-width:24%;
+                height: 184px;
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                #img_iconuni{
+                    height: 152px;
+                    width:120px;  
+                   
+                }
+            }
+            #text_university{
+                max-width: 728px;
+                height:184px;
+                margin-left: 10px;
+                padding-top: 24px;
+                #bachelorr{
+                    font-size: 32px;
+                    display:inline;
+                }
+                #name_uni{
+                    font-size: 18px;
+                    color: rgb(47, 0, 255);
+                    display:inline;
+                }
+
+                #gpa_bachelor{
+                    font-size: 18px;
+                    color: rgb(47, 0, 255);
+                    display:inline;
+                }
+            }
+            
+           
+        }
+        
+    }
+}
+
+#skills{
+    max-width:100%;
+    height:608px;
+    /* background-color:yellow; */
+    display: flex col;
+   
+    #part1_skills{
+        max-width: 100%;
+       height: 176px;
+        background-color: blanchedalmond;
+        text-align: center;
+        /* justify-items: center; */
+        display: flex;
+        flex-direction: column;
+        /*  */
+        gap: 50px;
+        
+        #head_skills{
+            display: inline;
+            margin: 0;
+           
+        }
+
+        #button_skills{
+            width: 100%;
+            height: 50%;
+            background-color: lightcoral;
+           display: flex;
+            justify-content: center; 
+            align-items: center; 
+            #area_bu{
+                width: 380px;
+                height: 50px;
+                background-color: antiquewhite;
+                border-radius: 50px;
+                display: flex;
+                gap: 50px; 
+                justify-content: center; 
+                align-items: center;
+            }
+            #button_technical{
+                width: 130px;
+                height: 50px;
+                border-radius: 50px;
+                border-color: rgb(6, 6, 63);
+                background: linear-gradient(90deg, red,orange);
+                
+            }
+            #button_tools{
+                width: 130px;
+                height: 50px;
+                border-radius: 50px;
+                border-color: rgb(6, 6, 63);
+                background: linear-gradient(90deg, red,orange);
+            }
+            
+        }
+       
+    } 
+
+    #part2_skills{
+        max-width: 100%;
+        height: 432px;
+        /* background-color: aquamarine; */
+        display: flex;
+        /* justify-content: space-between; */
+        #area_technical{
+            /* display:flex; */
+            width: 100%;
+            height: 432px;
+            /* background-color: blue; */
+            justify-content: center;
+           
+            #Technical_skills{
+                height: 432px;
+                width:  60%;
+                /* background-color: blueviolet; */
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                /* justify-items: center; */
+                align-items: center;
+                #head_technical{
+                    height: 48px;
+                    width: 90%;
+                    /* background-color:bisque; */
+                    margin-top: 5px;
+                   display:flex;
+                  
+                   
+                    #img_tec{
+                        height: 48px;
+                        width: 5%; 
+                    }
+                    #text_tec{
+                        color: black;
+                        font-size: 28px;
+                        width:90%;
+                        height: 48px;
+                        display: inline;
+                        margin:10px 0 0 10px;
+                        /* display:flex; */
+                    }
+                }
+
+                #boder_technical{
+                    height: 280px;
+                    width: 90%; 
+                    background-color:black;
+                    border: solid blueviolet 1px;
+                    border-radius: 24px;
+                    /* padding-top: 30px; */
+                    /* gap**** */
+                    display: flex;
+                    gap:70px;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    #tec_1{
+                        width: 150px;
+                        height: 70%;
+                        /* background-color: aquamarine; */
+                        
+                        #outertec1{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            background: conic-gradient(#8e2de2 0% 80%, #222 80% 100%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                          
+    
+                            #innertec1{
+                                width: 120px;
+                                height: 120px;
+                                background-color: #222;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                #percenttec1{
+                                    color: beige;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                        
+                       
+                        #area_language1{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            
+                            #language1{
+                                color: beige;
+                                font-size: 18px;
+                                display: inline;
+                            }
+                        }
+                
+                       
+                        
+                    }
+
+                    #tec_2{
+                        width: 150px;
+                        height: 70%;
+                        /* background-color: aquamarine; */
+                        #outertec2{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            background: conic-gradient(#8e2de2 0% 70%, #222 70% 100%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+    
+                            #innertec2{
+                                width: 120px;
+                                height: 120px;
+                                background-color: #222;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                #percenttec2{
+                                    color: beige;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                        #area_language2{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            
+                            #language2{
+                                color: beige;
+                                font-size: 18px;
+                                display: inline;
+                            }
+                        }
+                       
+                       
+                        
+                    }
+
+
+                    #tec_3{
+                        width: 150px;
+                        height: 70%;
+                        /* background-color: aquamarine; */
+                        #outertec3{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            background: conic-gradient(#8e2de2 0% 50%, #222 50% 100%);
+                            
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+    
+                            #innertec3{
+                                width: 120px;
+                                height: 120px;
+                                background-color: #222;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                #percenttec3{
+                                    color: beige;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                        #area_language3{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            
+                            #language3{
+                                color: beige;
+                                font-size: 18px;
+                                display: inline;
+                            }
+                        }
+                    }
+                       
+                        
+                    
+
+                }
+            }
+        }
+
+
+
+
+        #area_tools{
+           
+            width: 100%;
+            height: 432px;
+            /* background-color:green; */
+            
+            justify-content: center;
+
+            #Tools{
+                height: 432px;
+                width:  60%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            
+                #head_tools{
+                    height: 48px;
+                    width: 90%;
+                    /* background-color:bisque; */
+                    margin-top: 5px;
+                   display:flex;
+                  
+                   
+                    #img_tools{
+                        height: 48px;
+                        width: 5%;
+                    }
+                    #text_tools{
+                        color: black;
+                        font-size: 28px;
+                        width:90%;
+                        height: 48px;
+                        display: inline;
+                        margin:10px 0 0 10px;
+                        
+                    }
+                }
+
+                #boder_tools{
+                    height: 280px;
+                    width: 90%; 
+                    background-color:black;
+                    border: solid blueviolet 1px;
+                    border-radius: 24px;
+                    display: flex;
+                    gap:70px;
+                    justify-content: center;
+                    align-items: center;
+                    #tools_1{
+                        width: 150px;
+                        height: 70%;
+                        
+                        
+                        #outertools1{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            background: conic-gradient(#8e2de2 0% 80%, #222 80% 100%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                          
+    
+                            #innertools1{
+                                width: 120px;
+                                height: 120px;
+                                background-color: #222;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                #percenttools1{
+                                    color: beige;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                        
+                       
+                        #area_nametools1{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            
+                            #nametools1{
+                                color: beige;
+                                font-size: 18px;
+                                display: inline;
+                            }
+                        }
+                       
+                        
+                    }
+
+                    #tools_2{
+                        width: 150px;
+                        height: 70%;
+                        
+                        
+                        #outertools2{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            background: conic-gradient(#8e2de2 0% 80%, #222 80% 100%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                          
+    
+                            #innertools2{
+                                width: 120px;
+                                height: 120px;
+                                background-color: #222;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                #percenttools2{
+                                    color: beige;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                        
+                       
+                        #area_nametools2{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            
+                            #nametools2{
+                                color: beige;
+                                font-size: 18px;
+                                display: inline;
+                            }
+                        }
+                        
+                    }
+
+
+                    #tools_3{
+                        width: 150px;
+                        height: 70%;
+                        
+                        
+                        #outertools3{
+                            width: 150px;
+                            height: 150px;
+                            border-radius: 50%;
+                            background: conic-gradient(#8e2de2 0% 80%, #222 80% 100%);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                          
+    
+                            #innertools3{
+                                width: 120px;
+                                height: 120px;
+                                background-color: #222;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                #percenttools3{
+                                    color: beige;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                        
+                       
+                        #area_nametools3{
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            
+                            #nametools3{
+                                color: beige;
+                                font-size: 18px;
+                                display: inline;
+                            }
+                        }
+                        
+                       
+                        
+                    }
+
+                }
+            }
+        }
+
+      
+    }
+
+}
+
+#myproject{
+    max-width:100%;
+    height:608px;
+    background-color:yellowgreen;
+    display: flex col;  
+
+    #part1_myproject{
+        width:100%;
+        height:176px;
+        background-color: lightpink;
+        text-align: center;  
+        #head_myproject{
+            display: inline;
+           
+        }
+    }
+
+    #part2_myproject{
+        width:100%;
+        height:432px;
+        background-color:teal;
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+
+       
+
+        #project1{
+            width:20%;
+            height:90%;
+            background-color: white;
+            border-radius: 10px;
+            #link_project1{
+                width:100%;
+                height:70%;
+                display: block;
+                #project1_part1{
+                    width:100%;
+                    height:100%;
+                    border-radius: 10px 10px 0 0;
+                    justify-content: center;
+                    #img_project1{
+                        width:100%;
+                        height:100%; 
+                        border-radius:10px 10px 0 0;  
+                    }
+                }
+            }
+            #project1_part2{
+                width:100%;
+                height:30%;
+                background-color: chocolate;
+                border-radius: 0 0 10px 10px ;
+                #area_nameproject1{
+                    width:100%;
+                    height:60%; 
+                    background-color: bisque;
+                    #nameproject1{
+                        color: black;
+                        display: inline;
+                        padding: 8px;
+                    } 
+                    
+                }
+                #languages_p1{
+                    width:100%;
+                    height:40%; 
+                    background-color:blueviolet;
+                    border-radius: 0 0 10px 10px ;
+                    #area_languages_p1{
+                        width:100%;
+                        height:100%; 
+                        background-color: brown;
+                        border-radius:  0 0 10px 10px ;
+                        display: flex;
+                        gap: 8px;
+                        /* justify-items:center; */
+                        /* justify-content: center;
+                        align-content: center; */
+                        align-items: center;
+                        
+                        
+                        #lanp1_1, #lanp1_2, #lanp1_3 {
+                            width: 25%;
+                            height: 70%;
+                            display: flex;
+                            justify-content: center; /* จัดแนวนอน */
+                            align-items: center;     /* จัดแนวตั้ง */
+                            #textlanp1_1,#textlanp1_2,#textlanp1_3{
+                                display:inline
+                            }
+                        }
+
+                        #lanp1_1 {
+                            background-color: blue;
+                            margin-left: 8px;
+                        }
+
+                        #lanp1_2 {
+                            background-color: cornflowerblue;
+                        }
+
+                        #lanp1_3 {
+                            background-color: chocolate;
+                        }
+                        
+                        /* #lanp1_1{
+                            width:25%;
+                            height:70%; 
+                            background-color: blue;
+                            margin-left: 8px;
+                            
+                            align-content: center;
+                            
+                            #textlanp1_1{
+                                display:inline
+                            }
+                           
+                        } */
+
+                        /* #lanp1_2{
+                            width:25%;
+                            height:70%; 
+                            background-color:cornflowerblue;
+                            align-content: center;
+                            #textlanp1_2{
+                                display:inline
+                            }
+                           
+                        } */
+
+                        /* #lanp1_3{
+                            width:25%;
+                            height:70%; 
+                            background-color:chocolate;
+                            align-content: center;
+                            #textlanp1_3{
+                                display:inline
+                            }
+                           
+                        } */
+                    }
+
+                }
+            }
+        }
+
+        /* Project-2 */
+        #project2{
+            width:20%;
+            height:90%;
+            background-color: white;
+            border-radius: 10px;
+            #link_project2{
+                width:100%;
+                height:70%;
+                display: block;
+                #project2_part1{
+                    width:100%;
+                    height:100%;
+                    border-radius: 10px 10px 0 0;
+                    justify-content: center;
+                    #img_project2{
+                        width:100%;
+                        height:100%; 
+                        border-radius:10px 10px 0 0;  
+                    }
+                }
+            }
+            #project2_part2{
+                width:100%;
+                height:30%;
+                background-color: chocolate;
+                border-radius: 0 0 10px 10px ;
+                #area_nameproject2{
+                    width:100%;
+                    height:60%; 
+                    background-color: bisque;
+                    #nameproject2{
+                        color: black;
+                        display: inline;
+                        padding: 8px;
+                    } 
+                    
+                }
+                #languages_p2{
+                    width:100%;
+                    height:40%; 
+                    background-color:blueviolet;
+                    border-radius: 0 0 10px 10px ;
+                    #area_languages_p2{
+                        width:100%;
+                        height:100%; 
+                        background-color: brown;
+                        border-radius:  0 0 10px 10px ;
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+
+                        #lanp2_1, #lanp2_2 {
+                            width: 32%;
+                            height: 70%;
+                            display: flex;
+                            justify-content: center; 
+                            align-items: center;     
+                            #textlanp2_1,#textlanp2_2{
+                                display:inline
+                            }
+                        }
+
+                        #lanp2_1 {
+                            background-color: blue;
+                            margin-left: 8px;
+                        }
+
+                        #lanp2_2 {
+                            background-color: cornflowerblue;
+                        }
+                    }
+
+                }
+            }
+        }
+        /* Project-3 */
+        #project3{
+            width:20%;
+            height:90%;
+            background-color: white;
+            border-radius: 10px;
+            #link_project3{
+                width:100%;
+                height:70%;
+                display: block;
+                #project3_part1{
+                    width:100%;
+                    height:100%;
+                    border-radius: 10px 10px 0 0;
+                    justify-content: center;
+                    #img_project3{
+                        width:100%;
+                        height:100%; 
+                        border-radius:10px 10px 0 0;  
+                    }
+                }
+            }
+            #project3_part2{
+                width:100%;
+                height:30%;
+                background-color: chocolate;
+                border-radius: 0 0 10px 10px ;
+                #area_nameproject3{
+                    width:100%;
+                    height:60%; 
+                    background-color: bisque;
+                    #nameproject3{
+                        color: black;
+                        display: inline;
+                        padding: 8px;
+                    } 
+                    
+                }
+                #languages_p3{
+                    width:100%;
+                    height:40%; 
+                    background-color:blueviolet;
+                    border-radius: 0 0 10px 10px ;
+                    #area_languages_p3{
+                        width:100%;
+                        height:100%; 
+                        background-color: brown;
+                        border-radius:  0 0 10px 10px ;
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+
+                        #lanp3_1, #lanp3_2,#lanp3_3 {
+                            width: 25%;
+                            height: 70%;
+                            display: flex;
+                            justify-content: center; 
+                            align-items: center;     
+                            #textlanp3_1,#textlanp3_2,#textlanp3_1{
+                                display:inline
+                            }
+                        }
+
+                        #lanp3_1 {
+                            background-color: blue;
+                            margin-left: 8px;
+                        }
+
+                        #lanp3_2 {
+                            background-color: cornflowerblue;
+                        }
+
+                        
+                        #lanp3_3 {
+                            background-color: cornflowerblue;
+                        }
+                    }
+
+                }
+            }
+        }
+        
+    }
+
+    
+}
+
+
+#contact{
+    max-width:100%;
+    height:300px;
+    background-color:rgba(0, 255, 255, 0.678);
+    display: flex col;
+    #contact_part1{
+        max-width:100%;
+        height:40%;
+        display: flex;
+        background-color: crimson;
+        justify-content: center;
+        align-items: center;
+        #contact_me{
+            display: inline;
+        }
+    }
+    
+    #contact_part2{
+        max-width:100%;
+        height: 60%;
+        /* background-color:hotpink; */
+        padding-left: 100px;
+        #area_contact{
+            width:30%;
+            height: 100%;
+            /* background-color: gold; */
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            #contact_1,#contact_2,#contact_3{
+                max-width: 100%;
+                height: 25%;
+                border: solid orangered 1px ;
+                background-color:white;
+                display: flex;
+                gap:10px;
+                #imgcontact_1,#imgcontact_2,#imgcontact_3{
+                    width: 10%;
+                    height: 100%;  
+                }
+            }
+
+            
+        }
+         
+    }
+   
+}

@@ -3,47 +3,86 @@
     display: none;
 }
   
-  .visible {
+.visible {
     display: flex;
 }
-  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.fade-in-section {
+    opacity: 0; /* ซ่อนไว้ก่อน */
+    transform: translateY(20px); /* เลื่อนลงเล็กน้อย */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* ทำให้เปลี่ยนแบบนุ่มนวล */
+    will-change: opacity, transform; /* บอก browser ให้เตรียมไว้ล่วงหน้า เพิ่มประสิทธิภาพ */
+}
+  
+.fade-in-section.visible {
+    opacity: 1; /* แสดงเต็มที่ */
+    transform: translateY(0); /* เลื่อนกลับตำแหน่งเดิม */
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Comic+Relief:wght@400;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,700;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+  
+  /* @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+    }
+  
+    .projects {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .project {
+      width: 90%;
+    }
+  
+    .section {
+      padding: 1rem;
+    }
+    } */
+  
+/* .grid{
+  display: grid;
+  grid-template-columns: • repeat (auto-fit, minmax (200px, 1fr));
+  grid-gap: 3rem;
+} */
+
+
 
 body{
-    background-color: black;
+  background-color:black ;
 }
 #body_bar{
     max-width: 100%;
-    height: 56px; 
+    height: 3.5rem; 
     display: flex;
     justify-content: center;
     position: sticky;
+    z-index: 1;
     top:0;
     #bar{
         width: 40%;
         height: 56px;
-        background-color: white;
+        background-color:whitesmoke;
         /* border-bottom: solid black 2px; */
         box-shadow: 2px 2px 5px rgb(120, 115, 115);
         /* background-color: red; */
         
         display: flex;
-        border-radius:50px;
+        border-radius: 3rem ;
         #bar_left{
             width: 40%;
-            height: 56px;
+            height: 3.5rem;
             display: flex;
             /* background-color: lightcoral; */
             align-items: center;
-            padding-left: 12px;
+            padding-left: 0.75rem;
             #head{
                 font-family:"Cal Sans", sans-serif;
-                font-size: 25px;
+                font-size: 1.6rem;
                 display: inline;
-                padding: 5px;
+                padding: 0.3rem;
                 background: linear-gradient(90deg, rgb(68, 68, 244), rgb(159, 49, 238));
                 background-clip: text;
                 -webkit-text-fill-color:transparent;
@@ -51,7 +90,12 @@ body{
         }
         #bar_right{
             width: 70%;
-            height: 56px;
+            height: 3.5rem;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 0.9rem;
+            display: inline;
             display: flex;
             align-items: center; /* ให้ปุ่มอยู่กลางแนว y */
             justify-content: center;
@@ -64,19 +108,38 @@ body{
                     
                     /* background-color: aquamarine; */
                     display: flex;
-                    gap: 10px;
+                    gap: 0.6rem;
                     /* margin-left: 12.5%; */
                     align-items: center;
                         
 
                     #a_aboutme,#a_education,#a_skills,#a_project,#a_contact{
-                        height: 56px;
+                        height: 3.5rem;
                         /* import */
                         color: black;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                      
+                    }
+                    #a_aboutme:hover{
+                        text-decoration: underline rgb(159, 49, 238) 0.2rem;
+                    }
+
+                    #a_education:hover{
+                        text-decoration: underline rgb(159, 49, 238) 0.2rem;
+                    }
+
+                    #a_skills:hover{
+                        text-decoration: underline rgb(159, 49, 238) 0.2rem;
+                    }
+
+                    #a_project:hover{
+                        text-decoration: underline rgb(159, 49, 238) 0.2rem;
+                    }
+
+                    #a_contact:hover{
+                        text-decoration: underline rgb(159, 49, 238)0.2rem;
                     }
                 }
             
@@ -89,17 +152,17 @@ body{
 
 #blank{
     max-width: 100%;
-    height: 8px;
+    height: 0.5rem;
     
 }
 
 #Introduce{
     max-width: 100%;
-    height: 544px;
+    height:40rem;
     background-color: black;
     #introduce_part1{
         width: 100%;
-        height: 50%;
+        height: 40%;
         /* background-color: hotpink; */
         display: flex;
         justify-content: center;
@@ -112,16 +175,19 @@ body{
     }
     #introduce_part2{
         width: 100%;
-        height: 50%;
+        height: 60%;
         /* background-color: chocolate; */
         display: flex;
         flex-direction: column;
         justify-content:baseline;
         align-items:center;
+        padding-top: 1.9rem;
+        
+        
         #mename{
             
-            font-size: 48px;
-            margin: 0px;
+            font-size: 3rem;
+            margin:0rem;
             display: inline;
             font-family: "Cal Sans", sans-serif;
             font-weight: 400;
@@ -132,8 +198,8 @@ body{
         
         #front{
            
-            font-size:32px;
-            margin: 0px;
+            font-size:2rem;
+            margin:0rem;
             display: inline;
             font-family: "Cal Sans", sans-serif;
             font-weight: 400;
@@ -142,24 +208,28 @@ body{
             -webkit-text-fill-color:transparent;
         }
     }
+    
 
 }
 #about_me{
     max-width:100%;
-    height:608px;
+    height:38rem;
     /* background-color: pink; */
     display: flex;
 
     #intro_text{
         /* no max- */
         width:50%;
-        height:608px;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        gap:1px;
         /* background-color:blueviolet; */
         #about{
-            font-size:48px;
+            font-size:3rem;
             font-family: "Cal Sans", sans-serif;
             font-weight: 700;
-            margin-left: 50px;
+            margin-left: 3rem;
             background: linear-gradient(90deg,rgb(192, 242, 57),rgb(0, 238, 255));
             background-clip: text;
             -webkit-text-fill-color:transparent;
@@ -170,39 +240,42 @@ body{
         
         #area_aboutme{
             height: 60%;
-            width:75%;
+            width:70%;
             /* background-color: powderblue; */
-            margin-left: 50px;
-            border:solid powderblue 2px ;
-            border-radius: 30px;
+            margin-left: 3rem;
+            /* border:solid powderblue 2px ;
+            border-radius: 30px; */
             /* display: flex;
             flex-direction: column; */
             #part1text_aboutme{
-                width: 90%;
+                width: 100%;
                 height: 55%;
                 /* background-color:gold; */
-                text-indent: 50px;
+                text-indent: 4.4rem;
                 text-align: justify;
-                margin-top: 30px;
+                margin-top: 2rem;
                 
                 #text_aboutme_p1{
                     color: white;
                     font-family: "Cal Sans", sans-serif;
-                    font-size: 25px;
+                    font-size: 1.6rem;
                     display: inline;
                    
                 }
             }
             
             #part2text_aboutme{
-                width: 90%;
+                width: 100%;
                 height: 45%;
+                text-align: justify;
                 /* background-color:chocolate; */
-                text-indent: 50px;
+                text-indent:4.4rem;
+                padding-top: 1rem;
                 #text_aboutme_p2{
                     color: white;
                     font-family: "Cal Sans", sans-serif;
-                    font-size: 25px;
+                    font-weight: 100;
+                    font-size: 1.6rem;
                     display: inline;
                 }
             }
@@ -212,16 +285,21 @@ body{
 
     #intro_img{
         width:50%;
-        height:608px;
-        background-color:orange;
+        height:38rem;
+        /* background-color:orange; */
         display: flex ;
         align-items: center;
         justify-content: center;
         #Me{
             width:50%;
             height:70%; 
-            border-radius: 30px;
+            border-radius: 2rem;
+            /* box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.5); */
         }
+    }
+    #intro_img:hover{
+        transform: scale(1.2);
+        transition:2s;
     }
 }
 
@@ -239,10 +317,10 @@ body{
 
         
         #head_educationn{
-            font-size:48px;
+            font-size:3rem;
             font-family: "Cal Sans", sans-serif;
             font-weight: 700;
-            margin-left: 50px;
+            margin-left: 3rem;
             background: linear-gradient(90deg,rgb(192, 242, 57),rgb(0, 238, 255));
             background-clip: text;
             -webkit-text-fill-color:transparent;
@@ -251,52 +329,66 @@ body{
         }
        
     }
-    
+   
     #educat_1{
         max-width: 100%;
-        height: 216px;
-        background-color: black;
+        height: 13.5rem;
+        /* background-color:aquamarine; */
         display: flex;
         /* justify-content: center; */
         align-items: center; 
-        padding-left: 12.5%;
+        justify-content: end;
+        padding-right: 5%;
         #boder_educat_1{
-            width:880px;
-            height: 184px;
+            width:68%;
+            height: 11.5rem;
             background-color: aliceblue;
-            border: solid white 5px;
-            border-radius: 27px;
+            border: solid white 0.3rem;
+            border-radius: 1.7rem;
             display: flex;
 
             #icon_school{
-                max-width:24%;
-                height: 184px;
+                width:24%;
+                height: 11.5rem;
                 /* background-color: aqua; */
                 display: flex;
                 justify-content: center; 
                 align-items: center; 
                 #img_iconschool{
-                    height: 152px;
-                    width:160px;       
+                    height: 10rem;
+                    width:75%;       
                 }
             }
             #text_school{
-                max-width: 728px;
-                height:184px;
-                margin-left: 10px;
-                padding-top: 24px;
+                width: 76%;
+                height:11.5rem;
+                margin-left:0.6rem;
+                padding-top: 1.5rem;
+    
                 #high_school{
-                    font-size: 32px;
-                    display:inline;
+                    font-family: "Cal Sans", sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 2rem;
+                    margin:0.06rem 0 0 0;
+                    display:block;
                 }
                 #name_school{
-                    font-size: 18px;
+                    font-family: "Tuffy", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 1rem;
                     color: rgb(47, 0, 255);
+                    margin-top: 0.3rem;
                     display:inline;
+                   
                 }
 
                 #gpa_school{
-                    font-size: 18px;
+                    font-family: "Tuffy", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 1rem;
                     color: rgb(47, 0, 255);
                     display:inline;
                 }
@@ -309,49 +401,60 @@ body{
 
     #educat_2{
         max-width: 100%;
-        height: 216px;
-        background-color: black;
+        height: 13.5rem;
+        /* background-color: black; */
         display: flex;
-        /* justify-content: center; */
         align-items: center; 
-        padding-left: 12.5%;
+        justify-content: end;
+        padding-right: 5%;
         #boder_educat_2{
-            width:880px;
-            height: 184px;
+            width:68%;
+            height: 11.5rem;
             background-color: aliceblue;
-            border: solid white 5px;
-            border-radius: 27px;
+            border: solid white 0.3rem;
+            border-radius: 1.7rem;
             display: flex;
 
             #icon_university{
-                max-width:24%;
-                height: 184px;
+                width:24%;
+                height: 11.5rem;
                 display: flex;
                 justify-content: center; 
                 align-items: center; 
                 #img_iconuni{
-                    height: 152px;
-                    width:120px;  
+                    height: 9.5rem;
+                    width:60%;  
                    
                 }
             }
             #text_university{
-                max-width: 728px;
-                height:184px;
-                margin-left: 10px;
-                padding-top: 24px;
+                width: 76%;
+                height:11.5rem;
+                margin-left: 0.6rem;
+                padding-top: 1.5rem;
                 #bachelorr{
-                    font-size: 32px;
-                    display:inline;
+                    font-family: "Cal Sans", sans-serif;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-size: 2rem;
+                    display:block;
+                    margin:0.06rem 0 0 0;
+                    
                 }
                 #name_uni{
-                    font-size: 18px;
+                    font-family: "Tuffy", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size:1rem;
                     color: rgb(47, 0, 255);
                     display:inline;
                 }
 
                 #gpa_bachelor{
-                    font-size: 18px;
+                    font-family: "Tuffy", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size:1rem;
                     color: rgb(47, 0, 255);
                     display:inline;
                 }
@@ -365,130 +468,141 @@ body{
 
 #skills{
     max-width:100%;
-    height:608px;
+    height:38rem;
     /* background-color:yellow; */
     display: flex col;
    
     #part1_skills{
-        max-width: 100%;
-       height: 176px;
-        background-color: blanchedalmond;
-        text-align: center;
+        width: 100%;
+       height: 11rem;
+        /* background-color: blanchedalmond; */
         /* justify-items: center; */
         display: flex;
         flex-direction: column;
         /*  */
-        gap: 50px;
+        gap:3rem;
         
         #head_skills{
+            font-size:3rem;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 700;
+            background: linear-gradient(90deg,rgb(192, 242, 57),rgb(0, 238, 255));
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
             display: inline;
-            margin: 0;
+            margin: 0 0  0 22rem;
            
         }
 
         #button_skills{
             width: 100%;
             height: 50%;
-            background-color: lightcoral;
+            /* background-color: lightcoral; */
            display: flex;
             justify-content: center; 
             align-items: center; 
             #area_bu{
-                width: 380px;
-                height: 50px;
-                background-color: antiquewhite;
-                border-radius: 50px;
+                width: 30%;
+                height:3rem;
+                background-color: rgba(202, 206, 223, 0.886);
+                /* background-color: #ffeb3b; */
+                border-radius: 3rem;
                 display: flex;
-                gap: 50px; 
+                gap: 3rem; 
                 justify-content: center; 
                 align-items: center;
             }
-            #button_technical{
-                width: 130px;
-                height: 50px;
-                border-radius: 50px;
+            #button_technical,#button_tools{
+                font-family: "Cal Sans", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                width: 35%;
+                height: 3rem;
+                border-radius: 3rem;
                 border-color: rgb(6, 6, 63);
-                background: linear-gradient(90deg, red,orange);
+                background: linear-gradient(90deg,rgb(192, 242, 57),rgb(0, 238, 255));
                 
             }
-            #button_tools{
-                width: 130px;
-                height: 50px;
-                border-radius: 50px;
-                border-color: rgb(6, 6, 63);
-                background: linear-gradient(90deg, red,orange);
+
+            #button_technical:hover{
+                background: linear-gradient(90deg,rgb(208, 247, 101),rgb(103, 232, 241))
             }
-            
+            #button_tools:hover{
+                background: linear-gradient(90deg,rgb(208, 247, 101),rgb(103, 232, 241))
+            }
         }
        
     } 
 
     #part2_skills{
         max-width: 100%;
-        height: 432px;
+        height: 27rem;
         /* background-color: aquamarine; */
         display: flex;
         /* justify-content: space-between; */
         #area_technical{
             /* display:flex; */
             width: 100%;
-            height: 432px;
+            height: 100%;
             /* background-color: blue; */
             justify-content: center;
            
             #Technical_skills{
-                height: 432px;
+                height: 100%;
                 width:  60%;
                 /* background-color: blueviolet; */
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
+                gap: 1.25rem;
                 /* justify-items: center; */
                 align-items: center;
                 #head_technical{
-                    height: 48px;
+                    height: 3rem;
                     width: 90%;
                     /* background-color:bisque; */
-                    margin-top: 5px;
+                    margin-top:0.3rem;
                    display:flex;
                   
                    
                     #img_tec{
-                        height: 48px;
+                        height: 3rem;
                         width: 5%; 
                     }
                     #text_tec{
-                        color: black;
-                        font-size: 28px;
+                        color: white;
+                        font-family: "Cal Sans", sans-serif;
+                        font-weight: 700;
+                        font-style: normal ;
+                        font-size: 2rem;
                         width:90%;
-                        height: 48px;
+                        height: 3rem;
                         display: inline;
-                        margin:10px 0 0 10px;
+                        margin:0.6rem 0 0 0.6rem;
                         /* display:flex; */
                     }
                 }
 
                 #boder_technical{
-                    height: 280px;
-                    width: 90%; 
+                    height:17.5rem;
+                    width: 80%; 
                     background-color:black;
-                    border: solid blueviolet 1px;
-                    border-radius: 24px;
+                    border: solid blueviolet 0.0625rem;
+                    border-radius: 1.5rem;
                     /* padding-top: 30px; */
                     /* gap**** */
                     display: flex;
-                    gap:70px;
+                    gap:4.4rem;
                     justify-content: center;
                     align-items: center;
                     
                     #tec_1{
-                        width: 150px;
+                        width: 22%;
                         height: 70%;
                         /* background-color: aquamarine; */
                         
                         #outertec1{
-                            width: 150px;
-                            height: 150px;
+                            width: 100%;
+                            height:9.4rem;
                             border-radius: 50%;
                             background: conic-gradient(#8e2de2 0% 80%, #222 80% 100%);
                             display: flex;
@@ -498,8 +612,8 @@ body{
                           
     
                             #innertec1{
-                                width: 120px;
-                                height: 120px;
+                                width: 80%;
+                                height: 7.5rem;
                                 background-color: #222;
                                 border-radius: 50%;
                                 display: flex;
@@ -507,7 +621,7 @@ body{
                                 align-items: center;
                                 #percenttec1{
                                     color: beige;
-                                    font-size: 18px;
+                                    font-size: 1.1rem;
                                 }
                             }
                         }
@@ -519,8 +633,11 @@ body{
                             justify-content: center;
                             
                             #language1{
+                                font-family: "Cal Sans", sans-serif;
+                                font-weight: 400;
+                                font-style: normal;
                                 color: beige;
-                                font-size: 18px;
+                                font-size: 1.1rem;
                                 display: inline;
                             }
                         }
@@ -530,12 +647,12 @@ body{
                     }
 
                     #tec_2{
-                        width: 150px;
+                        width: 22%;
                         height: 70%;
                         /* background-color: aquamarine; */
                         #outertec2{
-                            width: 150px;
-                            height: 150px;
+                            width: 100%;
+                            height: 9.4rem;
                             border-radius: 50%;
                             background: conic-gradient(#8e2de2 0% 70%, #222 70% 100%);
                             display: flex;
@@ -544,8 +661,8 @@ body{
                             position: relative;
     
                             #innertec2{
-                                width: 120px;
-                                height: 120px;
+                                width: 80%;
+                                height: 7.5rem;
                                 background-color: #222;
                                 border-radius: 50%;
                                 display: flex;
@@ -553,7 +670,7 @@ body{
                                 align-items: center;
                                 #percenttec2{
                                     color: beige;
-                                    font-size: 18px;
+                                    font-size: 1.1rem;
                                 }
                             }
                         }
@@ -563,8 +680,11 @@ body{
                             justify-content: center;
                             
                             #language2{
+                                font-family: "Cal Sans", sans-serif;
+                                font-weight: 400;
+                                font-style: normal;
                                 color: beige;
-                                font-size: 18px;
+                                font-size: 1.1rem;
                                 display: inline;
                             }
                         }
@@ -575,23 +695,22 @@ body{
 
 
                     #tec_3{
-                        width: 150px;
+                        width: 22%;
                         height: 70%;
                         /* background-color: aquamarine; */
                         #outertec3{
-                            width: 150px;
-                            height: 150px;
+                            width: 100%;
+                            height: 9.4rem;
                             border-radius: 50%;
                             background: conic-gradient(#8e2de2 0% 50%, #222 50% 100%);
-                            
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             position: relative;
     
                             #innertec3{
-                                width: 120px;
-                                height: 120px;
+                                width: 80%;
+                                height: 7.5rem;
                                 background-color: #222;
                                 border-radius: 50%;
                                 display: flex;
@@ -599,7 +718,7 @@ body{
                                 align-items: center;
                                 #percenttec3{
                                     color: beige;
-                                    font-size: 18px;
+                                    font-size:1.1rem;
                                 }
                             }
                         }
@@ -609,8 +728,11 @@ body{
                             justify-content: center;
                             
                             #language3{
+                                font-family: "Cal Sans", sans-serif;
+                                font-weight: 400;
+                                font-style: normal;
                                 color: beige;
-                                font-size: 18px;
+                                font-size: 1.1rem;
                                 display: inline;
                             }
                         }
@@ -629,62 +751,64 @@ body{
         #area_tools{
            
             width: 100%;
-            height: 432px;
+            height: 100%;
             /* background-color:green; */
             
             justify-content: center;
 
             #Tools{
-                height: 432px;
+                height: 100%;
                 width:  60%;
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
+                gap:1.25rem;
                 align-items: center;
             
                 #head_tools{
-                    height: 48px;
+                    height: 3rem;
                     width: 90%;
                     /* background-color:bisque; */
-                    margin-top: 5px;
+                    margin-top: 0.3rem;
                    display:flex;
                   
                    
                     #img_tools{
-                        height: 48px;
-                        width: 5%;
+                        height: 3rem;
+                        width: 7%;
                     }
                     #text_tools{
-                        color: black;
-                        font-size: 28px;
+                        color: white;
+                        font-family: "Cal Sans", sans-serif;
+                        font-weight: 700;
+                        font-size:  2rem;
                         width:90%;
-                        height: 48px;
+                        height: 3rem;
                         display: inline;
-                        margin:10px 0 0 10px;
+                        margin:0.6rem 0 0 0.6rem;
                         
                     }
                 }
 
                 #boder_tools{
-                    height: 280px;
-                    width: 90%; 
+                    height: 17.5rem;
+                    width: 80%; 
                     background-color:black;
-                    border: solid blueviolet 1px;
-                    border-radius: 24px;
+                    border: solid blueviolet 0.0625rem;
+                    border-radius: 1.5rem;
                     display: flex;
-                    gap:70px;
+                    gap:4.4rem;
                     justify-content: center;
                     align-items: center;
                     #tools_1{
-                        width: 150px;
+                        width: 22%;
                         height: 70%;
                         
                         
                         #outertools1{
-                            width: 150px;
-                            height: 150px;
+                            width:100%;
+                            height: 9.4rem;
                             border-radius: 50%;
-                            background: conic-gradient(#8e2de2 0% 80%, #222 80% 100%);
+                            background: conic-gradient(#8e2de2 0% 70%, #222 70% 100%);
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -692,8 +816,8 @@ body{
                           
     
                             #innertools1{
-                                width: 120px;
-                                height: 120px;
+                                width: 80%;
+                                height: 7.5rem;
                                 background-color: #222;
                                 border-radius: 50%;
                                 display: flex;
@@ -701,7 +825,7 @@ body{
                                 align-items: center;
                                 #percenttools1{
                                     color: beige;
-                                    font-size: 18px;
+                                    font-size: 1.1rem;
                                 }
                             }
                         }
@@ -713,8 +837,11 @@ body{
                             justify-content: center;
                             
                             #nametools1{
+                                font-family: "Cal Sans", sans-serif;
+                                font-weight: 400;
+                                font-style: normal;
                                 color: beige;
-                                font-size: 18px;
+                                font-size: 1.1rem;
                                 display: inline;
                             }
                         }
@@ -723,15 +850,15 @@ body{
                     }
 
                     #tools_2{
-                        width: 150px;
+                        width: 22%;
                         height: 70%;
                         
                         
                         #outertools2{
-                            width: 150px;
-                            height: 150px;
+                            width: 100%;
+                            height: 9.4rem;
                             border-radius: 50%;
-                            background: conic-gradient(#8e2de2 0% 80%, #222 80% 100%);
+                            background: conic-gradient(#8e2de2 0% 70%, #222 70% 100%);
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -739,8 +866,8 @@ body{
                           
     
                             #innertools2{
-                                width: 120px;
-                                height: 120px;
+                                width: 80%;
+                                height: 7.5rem;
                                 background-color: #222;
                                 border-radius: 50%;
                                 display: flex;
@@ -748,7 +875,7 @@ body{
                                 align-items: center;
                                 #percenttools2{
                                     color: beige;
-                                    font-size: 18px;
+                                    font-size: 1.1rem;
                                 }
                             }
                         }
@@ -760,8 +887,11 @@ body{
                             justify-content: center;
                             
                             #nametools2{
+                                font-family: "Cal Sans", sans-serif;
+                                font-weight: 400;
+                                font-style: normal;
                                 color: beige;
-                                font-size: 18px;
+                                font-size: 1.1rem;
                                 display: inline;
                             }
                         }
@@ -770,15 +900,15 @@ body{
 
 
                     #tools_3{
-                        width: 150px;
+                        width: 22%;
                         height: 70%;
                         
                         
                         #outertools3{
-                            width: 150px;
-                            height: 150px;
+                            width: 100%;
+                            height: 9.4rem;
                             border-radius: 50%;
-                            background: conic-gradient(#8e2de2 0% 80%, #222 80% 100%);
+                            background: conic-gradient(#8e2de2 0% 30%, #222 30% 100%);
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -786,8 +916,8 @@ body{
                           
     
                             #innertools3{
-                                width: 120px;
-                                height: 120px;
+                                width: 80%;
+                                height:7.5rem;
                                 background-color: #222;
                                 border-radius: 50%;
                                 display: flex;
@@ -795,7 +925,7 @@ body{
                                 align-items: center;
                                 #percenttools3{
                                     color: beige;
-                                    font-size: 18px;
+                                    font-size: 1.1rem;
                                 }
                             }
                         }
@@ -807,8 +937,11 @@ body{
                             justify-content: center;
                             
                             #nametools3{
+                                font-family: "Cal Sans", sans-serif;
+                                font-weight: 400;
+                                font-style: normal;
                                 color: beige;
-                                font-size: 18px;
+                                font-size: 1.1rem;
                                 display: inline;
                             }
                         }
@@ -828,16 +961,24 @@ body{
 
 #myproject{
     max-width:100%;
-    height:608px;
-    background-color:yellowgreen;
+    height:48rem;
+    /* background-color:yellowgreen; */
     display: flex col;  
 
     #part1_myproject{
         width:100%;
-        height:176px;
-        background-color: lightpink;
+        height:11rem;
+        /* background-color: lightpink; */
         text-align: center;  
+        display: flex;
+        justify-content: center;
         #head_myproject{
+            font-size:3rem;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 700;
+            background: linear-gradient(90deg,rgb(192, 242, 57),rgb(0, 238, 255));
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
             display: inline;
            
         }
@@ -845,63 +986,92 @@ body{
 
     #part2_myproject{
         width:100%;
-        height:432px;
-        background-color:teal;
+        height:75%;
+        /* background-color:teal; */
         display: flex;
         justify-content: center;
-        gap: 100px;
+        gap:6rem;
 
-       
-
-        #project1{
+       #link_project1{
             width:20%;
-            height:90%;
+            height:75%;
+            display: block;
+            border-radius: 0.625rem;
+            text-decoration: none;
+            color: inherit;  
+            #project1{
+            width:100%;
+            height:100%;
             background-color: white;
-            border-radius: 10px;
-            #link_project1{
-                width:100%;
-                height:70%;
-                display: block;
+            border-radius: 0.625rem;
+           
                 #project1_part1{
                     width:100%;
-                    height:100%;
-                    border-radius: 10px 10px 0 0;
+                    height:60%;
+                    border-radius:  0.625rem 0.625rem 0 0;
+                    display: flex;
                     justify-content: center;
+                    align-items: center;
                     #img_project1{
-                        width:100%;
-                        height:100%; 
-                        border-radius:10px 10px 0 0;  
+                        width:95%;
+                        height:85%; 
+                        /* border-radius:10px 10px 0 0;   */
+                        background-size: cover;
                     }
                 }
-            }
-            #project1_part2{
-                width:100%;
-                height:30%;
-                background-color: chocolate;
-                border-radius: 0 0 10px 10px ;
-                #area_nameproject1{
+                
+                #project1_part2{
                     width:100%;
-                    height:60%; 
-                    background-color: bisque;
-                    #nameproject1{
-                        color: black;
-                        display: inline;
-                        padding: 8px;
-                    } 
+                    height:40%;
+                    /* background-color: chocolate; */
+                    border-radius: 0 0  0.625rem  0.625rem ;
+
+                    #area_nameproject1{
+                        width:100%;
+                        height:70%; 
+                        /* background-color: bisque; */
+                        #nameproject1{
+                            font-size: 1.1rem;
+                            font-family: "Cal Sans", sans-serif;
+                            font-weight: 600;
+                            font-style: normal;
+                            color: black;
+                            /* display: inline; */
+                            padding:0.5rem 0 0 1.1rem; 
+                            margin: 0;
+                        } 
+                        #area_detailp1{
+                            width:100%;
+                            height:58%;
+                            /* background-color:lightpink;  */
+                            #detailp1{
+                                font-family: "Cal Sans", sans-serif;
+                                font-size:0.75rem;
+                                font-weight: 100;
+                                color:gray;
+                                font-style: normal;
+                                text-indent: 0.5rem;
+                                text-align: justify;
+                                line-height:1.5;
+                                margin: 0  0.625rem 0 0.625rem;
+                              
+                            } 
+                        }
+                    }
                     
                 }
                 #languages_p1{
                     width:100%;
-                    height:40%; 
-                    background-color:blueviolet;
-                    border-radius: 0 0 10px 10px ;
+                    height:30%; 
+                    /* background-color:blueviolet; */
+                    border-radius: 0 0 0.625rem 0.625rem ;
                     #area_languages_p1{
                         width:100%;
                         height:100%; 
-                        background-color: brown;
-                        border-radius:  0 0 10px 10px ;
+                        /* background-color: brown; */
+                        border-radius:  0 0 0.625rem 0.625rem ;
                         display: flex;
-                        gap: 8px;
+                        gap: 0.5rem;
                         /* justify-items:center; */
                         /* justify-content: center;
                         align-content: center; */
@@ -909,7 +1079,7 @@ body{
                         
                         
                         #lanp1_1, #lanp1_2, #lanp1_3 {
-                            width: 25%;
+                            width: 10%;
                             height: 70%;
                             display: flex;
                             justify-content: center; /* จัดแนวนอน */
@@ -920,236 +1090,273 @@ body{
                         }
 
                         #lanp1_1 {
-                            background-color: blue;
-                            margin-left: 8px;
-                        }
-
-                        #lanp1_2 {
-                            background-color: cornflowerblue;
-                        }
-
-                        #lanp1_3 {
-                            background-color: chocolate;
+                            margin-left: 0.5rem;
                         }
                         
-                        /* #lanp1_1{
-                            width:25%;
-                            height:70%; 
-                            background-color: blue;
-                            margin-left: 8px;
-                            
-                            align-content: center;
-                            
-                            #textlanp1_1{
-                                display:inline
-                            }
-                           
-                        } */
-
-                        /* #lanp1_2{
-                            width:25%;
-                            height:70%; 
-                            background-color:cornflowerblue;
-                            align-content: center;
-                            #textlanp1_2{
-                                display:inline
-                            }
-                           
-                        } */
-
-                        /* #lanp1_3{
-                            width:25%;
-                            height:70%; 
-                            background-color:chocolate;
-                            align-content: center;
-                            #textlanp1_3{
-                                display:inline
-                            }
-                           
-                        } */
                     }
 
                 }
             }
         }
+
+        
+        
 
         /* Project-2 */
-        #project2{
+        #link_project2{
             width:20%;
-            height:90%;
-            background-color: white;
-            border-radius: 10px;
-            #link_project2{
+            height:75%;
+            display: block;
+            border-radius: 0.625rem;
+            text-decoration: none;
+            color: inherit; 
+            
+            #project2{
                 width:100%;
-                height:70%;
-                display: block;
+                height:100%;
+                background-color: white;
+                border-radius: 0.625rem;
+                
                 #project2_part1{
                     width:100%;
-                    height:100%;
-                    border-radius: 10px 10px 0 0;
+                    height:60%;
+                    border-radius: 0.625rem 0.625rem 0 0;
+                    display: flex;
                     justify-content: center;
+                    align-items: center;
                     #img_project2{
-                        width:100%;
-                        height:100%; 
-                        border-radius:10px 10px 0 0;  
+                        background-color: aqua;
+                        width:95%;
+                        height:85%;
+                            /* border-radius:10px 10px 0 0;   */
                     }
                 }
-            }
-            #project2_part2{
-                width:100%;
-                height:30%;
-                background-color: chocolate;
-                border-radius: 0 0 10px 10px ;
-                #area_nameproject2{
+                
+                #project2_part2{
                     width:100%;
-                    height:60%; 
-                    background-color: bisque;
-                    #nameproject2{
-                        color: black;
-                        display: inline;
-                        padding: 8px;
-                    } 
-                    
-                }
-                #languages_p2{
-                    width:100%;
-                    height:40%; 
-                    background-color:blueviolet;
-                    border-radius: 0 0 10px 10px ;
-                    #area_languages_p2{
+                    height:40%;
+                    /* background-color: chocolate; */
+                    border-radius: 0 0 0.625rem 0.625rem ;
+                    #area_nameproject2{
                         width:100%;
-                        height:100%; 
-                        background-color: brown;
-                        border-radius:  0 0 10px 10px ;
-                        display: flex;
-                        gap: 8px;
-                        align-items: center;
-
-                        #lanp2_1, #lanp2_2 {
-                            width: 32%;
-                            height: 70%;
+                        height:70%; 
+                        /* background-color: bisque; */
+                        #nameproject2{
+                            font-size: 1.1rem;
+                            font-family: "Cal Sans", sans-serif;
+                            font-weight: 600;
+                            font-style: normal;
+                            color: black;
+                            padding:0.5rem  0 0 1.1rem; 
+                            margin: 0rem;
+                        } 
+    
+                        #area_detailp2{
+                            width:100%;
+                            height:58%;
+                           
+                            #detailp2{
+                                font-family: "Cal Sans", sans-serif;
+                                font-size:0.75rem;
+                                font-weight: 100;
+                                color:gray;
+                                font-style: normal;
+                                text-indent: 0.5rem;
+                                text-align: justify;
+                                line-height:1.5;
+                                margin: 0  0.625rem 0  0.625rem;
+                            } 
+                        }
+                      
+    
+                        
+                    }
+                    #languages_p2{
+                        width:100%;
+                        height:30%; 
+                        /* background-color:blueviolet; */
+                        border-radius: 0 0  0.625rem  0.625rem ;
+                        #area_languages_p2{
+                            width:100%;
+                            height:100%; 
+                            /* background-color: brown; */
+                            border-radius:  0 0  0.625rem 0.625rem ;
                             display: flex;
-                            justify-content: center; 
-                            align-items: center;     
-                            #textlanp2_1,#textlanp2_2{
-                                display:inline
+                            gap: 0.5rem;
+                            align-items: center;
+    
+                            #lanp2_1, #lanp2_2 {
+                                width: 10%;
+                                height: 70%;
+                                display: flex;
+                                justify-content: center; 
+                                align-items: center;     
+                                #textlanp2_1,#textlanp2_2{
+                                    display:inline
+                                }
                             }
+    
+                            #lanp2_1 {
+                                width: 14%;
+                                margin-left:  0.5rem;
+                            }
+                            #lanp2_3 {
+                                width: 10%
+                            }
+    
+    
                         }
-
-                        #lanp2_1 {
-                            background-color: blue;
-                            margin-left: 8px;
-                        }
-
-                        #lanp2_2 {
-                            background-color: cornflowerblue;
-                        }
+    
                     }
-
                 }
             }
         }
+
         /* Project-3 */
-        #project3{
+        #link_project3{
             width:20%;
-            height:90%;
-            background-color: white;
-            border-radius: 10px;
-            #link_project3{
+            height:75%; 
+            display: block; 
+            text-decoration:none;
+
+            #project3{
                 width:100%;
-                height:70%;
-                display: block;
+                height:100%;
+                background-color: white;
+                border-radius: 0.625rem;
+                
                 #project3_part1{
                     width:100%;
-                    height:100%;
-                    border-radius: 10px 10px 0 0;
+                    height:60%;
+                    border-radius: 0.625rem 0.625rem 0 0;
+                    display: flex;
                     justify-content: center;
+                    align-items: center;
                     #img_project3{
-                        width:100%;
-                        height:100%; 
-                        border-radius:10px 10px 0 0;  
+                        width:95%;
+                        height:85%;
+                        background-color: gold;
+                           
                     }
                 }
-            }
-            #project3_part2{
-                width:100%;
-                height:30%;
-                background-color: chocolate;
-                border-radius: 0 0 10px 10px ;
-                #area_nameproject3{
+                
+                #project3_part2{
                     width:100%;
-                    height:60%; 
-                    background-color: bisque;
-                    #nameproject3{
-                        color: black;
-                        display: inline;
-                        padding: 8px;
-                    } 
-                    
-                }
-                #languages_p3{
-                    width:100%;
-                    height:40%; 
-                    background-color:blueviolet;
-                    border-radius: 0 0 10px 10px ;
-                    #area_languages_p3{
+                    height:40%;
+                    /* background-color: chocolate; */
+                    border-radius: 0 0 0.625rem 0.625rem;
+                    #area_nameproject3{
                         width:100%;
-                        height:100%; 
-                        background-color: brown;
-                        border-radius:  0 0 10px 10px ;
-                        display: flex;
-                        gap: 8px;
-                        align-items: center;
-
-                        #lanp3_1, #lanp3_2,#lanp3_3 {
-                            width: 25%;
-                            height: 70%;
+                        height:70%; 
+                        /* background-color: bisque; */
+                        #nameproject3{
+                            font-size: 1.1rem;
+                            font-family: "Cal Sans", sans-serif;
+                            font-weight: 600;
+                            font-style: normal;
+                            color: black;
+                            padding:0.5rem 0 0 1.1rem; 
+                            margin: 0rem;
+                        } 
+    
+                        #area_detailp3{
+                            width:100%;
+                            height:58%;
+    
+                            #detailp3{
+                                font-family: "Cal Sans", sans-serif;
+                                font-size:0.75rem;
+                                font-weight: 100;
+                                color:gray;
+                                font-style: normal;
+                                text-indent: 8px;
+                                text-align: justify;
+                                line-height:1.5;
+                                margin: 0  0.625rem 0  0.625rem;
+                            } 
+                        }
+                        
+                    }
+                    #languages_p3{
+                        width:100%;
+                        height:30%; 
+                        /* background-color:blueviolet; */
+                        border-radius: 0 0  0.625rem  0.625rem ;
+                        #area_languages_p3{
+                            width:100%;
+                            height:100%; 
+                            /* background-color: brown; */
+                            border-radius:  0 0  0.625rem  0.625rem ;
                             display: flex;
-                            justify-content: center; 
-                            align-items: center;     
-                            #textlanp3_1,#textlanp3_2,#textlanp3_1{
-                                display:inline
+                            gap: 0.5rem;
+                            align-items: center;
+    
+                            #lanp3_1, #lanp3_2,#lanp3_3 {
+                                width: 10%;
+                                height: 70%;
+                                display: flex;
+                                justify-content: center; 
+                                align-items: center;     
+                                #textlanp3_1,#textlanp3_2,#textlanp3_1{
+                                    display:inline
+                                }
+                            }
+    
+                            #lanp3_1 {
+                                margin-left: 0.5rem;
+    
                             }
                         }
-
-                        #lanp3_1 {
-                            background-color: blue;
-                            margin-left: 8px;
-                        }
-
-                        #lanp3_2 {
-                            background-color: cornflowerblue;
-                        }
-
-                        
-                        #lanp3_3 {
-                            background-color: cornflowerblue;
-                        }
                     }
-
                 }
             }
         }
         
+        #project1:hover{
+            transform: scale(1.1);
+            transition:2s;
+        }
+
+        #project2:hover{
+            transform: scale(1.1);
+            transition:2s;
+        }
+        
+        #project3:hover{
+            transform: scale(1.1);
+            transition:2s;
+        }
     }
 
     
 }
 
 
+@keyframes floatUpDown {
+    0%   { top: 0rem; }
+    50%  { top: -1rem; }
+    100% { top: 0rem; }
+}
+
 #contact{
     max-width:100%;
-    height:300px;
-    background-color:rgba(0, 255, 255, 0.678);
+    height:32rem;
+    /* background-color:rgba(0, 255, 255, 0.678); */
     display: flex col;
     #contact_part1{
         max-width:100%;
         height:40%;
         display: flex;
-        background-color: crimson;
+        /* background-color: crimson; */
         justify-content: center;
-        align-items: center;
+        align-items:center;
         #contact_me{
+            font-size:3rem;
+            font-family: "Cal Sans", sans-serif;
+            font-weight: 700;
+            background: linear-gradient(90deg,rgb(192, 242, 57),rgb(0, 238, 255));
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
             display: inline;
         }
     }
@@ -1158,30 +1365,648 @@ body{
         max-width:100%;
         height: 60%;
         /* background-color:hotpink; */
-        padding-left: 100px;
+        padding-left: 6rem;
+        display: flex;
+        flex-direction: row;
         #area_contact{
-            width:30%;
-            height: 100%;
+            width:50%;
             /* background-color: gold; */
             display: flex;
             flex-direction: column;
-            gap:10px;
+            gap:0.625rem;
+            padding-top: 6rem;
             #contact_1,#contact_2,#contact_3{
-                max-width: 100%;
-                height: 25%;
-                border: solid orangered 1px ;
-                background-color:white;
+                font-family: "Cal Sans", sans-serif;
+                font-weight: 600;
+                font-style: normal;
+                width: 60%;
+                height: 20%;
+                border: solid green 1px ;
+                background: linear-gradient(90deg,rgb(192, 242, 57),rgb(0, 238, 255));
                 display: flex;
-                gap:10px;
+                align-items: center;
+                gap:0.625;
+                margin-left: 6rem;
                 #imgcontact_1,#imgcontact_2,#imgcontact_3{
                     width: 10%;
-                    height: 100%;  
+                    height: 100%;
+                   
                 }
             }
 
-            
+            #taga_github{
+                text-decoration: none;
+            }
         }
+        #area_contactpart2{
+            width: 50%;
+            height: 100%;
+            padding-left: 16rem;
+      
+        }
+        
+        #img_contact{
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation: floatUpDown 1.25s ease-in-out infinite;
+        }
+        
+       
+      
+
+        
          
     }
    
 }
+
+
+/* ///////////////////////// */
+/* Add this code to the bottom of your Port.css file */
+
+/* ============ RESPONSIVE BASE STYLES ============ */
+/* ใช้หน่วย rem, %, vh, vw เพื่อให้เว็บไซต์ปรับขนาดได้อย่างต่อเนื่อง */
+
+html {
+    font-size: 16px; /* ฐานสำหรับหน่วย rem */
+  }
+  
+  body {
+    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
+  }
+  
+  img {
+    max-width: 100%; /* ป้องกันรูปภาพล้นออกจากพื้นที่ */
+    height: auto; /* รักษาอัตราส่วน */
+  }
+  
+  /* ============ RESPONSIVE UTILITIES ============ */
+  /* CSS Variables สำหรับใช้งานร่วมกันในทุกขนาดหน้าจอ */
+  
+  :root {
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    --text-xs: 0.75rem;
+    --text-sm: 0.9rem;
+    --text-md: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3rem;
+  }
+  
+  /* ============ FLUID TYPOGRAPHY ============ */
+  /* ทำให้ขนาดตัวอักษรปรับตามขนาดหน้าจอแบบต่อเนื่อง */
+  
+  #mename {
+    font-size: clamp(1.5rem, 5vw, 3rem) !important;
+  }
+  
+  #front {
+    font-size: clamp(1.2rem, 4vw, 2rem) !important;
+  }
+  
+  #about, #head_educationn, #head_skills, #head_myproject, #contact_me {
+    font-size: clamp(1.5rem, 5vw, 3rem) !important;
+  }
+  
+  #text_aboutme_p1, #text_aboutme_p2 {
+    font-size: clamp(1rem, 3vw, 1.6rem) !important;
+  }
+  
+  /* ============ RESPONSIVE NAVIGATION ============ */
+  /* ทำให้เมนูนำทางแสดงผลได้ดีในทุกขนาดหน้าจอ */
+  
+  #body_bar #bar {
+    width: min(90%, 1200px); /* ใช้ค่าเล็กสุดระหว่าง 90% และ 1200px */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงแบบนุ่มนวล */
+  }
+  
+  /* ============ MEDIA QUERIES ============ */
+  /* แบ่งเป็นหลายระดับเพื่อให้ครอบคลุมทุกขนาดหน้าจอ */
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media screen and (max-width: 1400px) {
+    #body_bar #bar {
+      width: 60%;
+    }
+    
+    #bar_right #area_button {
+      gap: 0.8rem;
+    }
+    
+    #Introduce #introduce_part1 #Meimg {
+      width: 15%;
+    }
+    
+    #about_me #intro_text #area_aboutme {
+      width: 80%;
+    }
+    
+    #education #educat_1 #boder_educat_1,
+    #education #educat_2 #boder_educat_2 {
+      width: 75%;
+    }
+    
+    #skills #part1_skills #button_skills #area_bu {
+      width: 40%;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media screen and (max-width: 1200px) {
+    #body_bar #bar {
+      width: 70%;
+    }
+    
+    #Introduce #introduce_part1 #Meimg {
+      width: 18%;
+    }
+    
+    #about_me #intro_text #area_aboutme {
+      width: 85%;
+    }
+    
+    #education #educat_1 #boder_educat_1,
+    #education #educat_2 #boder_educat_2 {
+      width: 80%;
+    }
+    
+    #myproject #part2_myproject #link_project1,
+    #myproject #part2_myproject #link_project2,
+    #myproject #part2_myproject #link_project3 {
+      width: 25%;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media screen and (max-width: 992px) {
+    /* Navigation bar */
+    #body_bar #bar {
+      width: 90%;
+    }
+    
+    #bar_right #area_button {
+      gap: 0.3rem;
+    }
+    
+    #bar_right #area_button a {
+      font-size: 0.8rem;
+    }
+    
+    /* Introduction Section */
+    #Introduce {
+      height: auto;
+      min-height: 30rem;
+      padding: 2rem 0;
+    }
+    
+    #Introduce #introduce_part1 #Meimg {
+      width: 25%;
+    }
+    
+    /* About Me Section */
+    #about_me {
+      flex-direction: column;
+      height: auto;
+      padding: 2rem 0;
+    }
+    
+    #about_me #intro_text {
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    #about_me #intro_img {
+      width: 90%;
+      margin: 2rem auto;
+      height: auto;
+    }
+    
+    #about_me #intro_text #about {
+      margin-left: 0;
+      text-align: center;
+    }
+    
+    #about_me #intro_text #area_aboutme {
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    /* Education Section */
+    #education {
+      height: auto;
+      padding-bottom: 2rem;
+    }
+    
+    #education #educat_1 #boder_educat_1,
+    #education #educat_2 #boder_educat_2 {
+      width: 90%;
+    }
+    
+    #education #educat_1,
+    #education #educat_2 {
+      justify-content: center;
+      padding-right: 0;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    
+    #education #part1_edu #head_educationn {
+      margin-left: 0;
+    }
+    
+    /* Skills Section */
+    #skills {
+      height: auto;
+      padding-bottom: 2rem;
+    }
+    
+    #skills #part1_skills {
+      height: auto;
+      padding: 1rem 0;
+    }
+    
+    #skills #part1_skills #head_skills {
+      margin: 0;
+      text-align: center;
+    }
+    
+    #skills #part1_skills #button_skills #area_bu {
+      width: 60%;
+      gap: 1rem;
+    }
+    
+    #skills #part1_skills #button_skills #button_technical,
+    #skills #part1_skills #button_skills #button_tools {
+      width: 45%;
+    }
+    
+    #skills #part2_skills {
+      height: auto;
+    }
+    
+    #skills #part2_skills #area_technical #Technical_skills,
+    #skills #part2_skills #area_tools #Tools {
+      width: 90%;
+    }
+    
+    /* Projects Section */
+    #myproject {
+      height: auto;
+      padding-bottom: 3rem;
+    }
+    
+    #myproject #part2_myproject {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    
+    #myproject #part2_myproject #link_project1,
+    #myproject #part2_myproject #link_project2,
+    #myproject #part2_myproject #link_project3 {
+      width: 40%;
+      height: 25rem;
+    }
+    
+    /* Contact Section */
+    #contact {
+      height: auto;
+      padding-bottom: 2rem;
+    }
+    
+    #contact #contact_part2 {
+      flex-direction: column;
+      padding-left: 0;
+    }
+    
+    #contact #contact_part2 #area_contact {
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 1rem;
+    }
+    
+    #contact #contact_part2 #area_contact #contact_1,
+    #contact #contact_part2 #area_contact #contact_2,
+    #contact #contact_part2 #area_contact #contact_3 {
+      margin-left: 0;
+      width: 100%;
+    }
+    
+    #contact #contact_part2 #area_contactpart2 {
+      width: 90%;
+      margin: 2rem auto;
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media screen and (max-width: 768px) {
+    /* Navigation bar */
+    #body_bar {
+      height: auto;
+    }
+    
+    #body_bar #bar {
+      width: 95%;
+    }
+    
+    #bar_right #area_button {
+      gap: 0.2rem;
+    }
+    
+    #bar_right #area_button a {
+      font-size: 0.7rem;
+      padding: 0 0.2rem;
+    }
+    
+    /* Introduction Section */
+    #Introduce #introduce_part1 #Meimg {
+      width: 30%;
+    }
+    
+    /* Projects Section */
+    #myproject #part2_myproject #link_project1,
+    #myproject #part2_myproject #link_project2,
+    #myproject #part2_myproject #link_project3 {
+      width: 80%;
+      height: auto;
+    }
+  }
+  
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media screen and (max-width: 576px) {
+    /* Base font adjustment */
+    html {
+      font-size: 14px;
+    }
+    
+    /* Navigation bar */
+    #body_bar {
+      height: auto;
+      position: relative;
+    }
+    
+    #body_bar #bar {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      border-radius: 0;
+    }
+    
+    #bar_left, #bar_right {
+      width: 100% !important;
+      height: auto !important;
+      padding: 0.5rem 0;
+      justify-content: center;
+    }
+    
+    #bar_right #area_button {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+    
+    #bar_right #area_button a {
+      margin: 0.3rem 0.5rem;
+    }
+    
+    /* Introduction Section */
+    #Introduce #introduce_part1 #Meimg {
+      width: 40%;
+    }
+    
+    /* About Me Section */
+    #about_me #intro_text #area_aboutme #part1text_aboutme,
+    #about_me #intro_text #area_aboutme #part2text_aboutme {
+      text-indent: 1.5rem;
+    }
+    
+    /* Education Section */
+    #education #educat_1 #boder_educat_1,
+    #education #educat_2 #boder_educat_2 {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+    }
+    
+    #education #educat_1 #boder_educat_1 #icon_school,
+    #education #educat_2 #boder_educat_2 #icon_university {
+      width: 100%;
+      height: auto;
+      padding: 1rem 0;
+    }
+    
+    #education #educat_1 #boder_educat_1 #text_school,
+    #education #educat_2 #boder_educat_2 #text_university {
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+      text-align: center;
+    }
+    
+    #education #educat_1 #boder_educat_1 #text_school #high_school,
+    #education #educat_2 #boder_educat_2 #text_university #bachelorr {
+      font-size: 1.5rem;
+    }
+    
+    /* Skills Section */
+    #skills #part2_skills #area_technical #Technical_skills #boder_technical,
+    #skills #part2_skills #area_tools #Tools #boder_tools {
+      flex-direction: column;
+      height: auto;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+    
+    #skills #part2_skills #area_technical #Technical_skills #boder_technical #tec_1,
+    #skills #part2_skills #area_technical #Technical_skills #boder_technical #tec_2,
+    #skills #part2_skills #area_technical #Technical_skills #boder_technical #tec_3,
+    #skills #part2_skills #area_tools #Tools #boder_tools #tools_1,
+    #skills #part2_skills #area_tools #Tools #boder_tools #tools_2,
+    #skills #part2_skills #area_tools #Tools #boder_tools #tools_3 {
+      width: 60%;
+      margin: 0 auto;
+    }
+    
+    /* Contact Section */
+    #contact #contact_part2 #area_contact #contact_1,
+    #contact #contact_part2 #area_contact #contact_2,
+    #contact #contact_part2 #area_contact #contact_3 {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+      gap: 0.5rem;
+    }
+    
+    #contact #contact_part2 #area_contact #contact_1 #imgcontact_1,
+    #contact #contact_part2 #area_contact #contact_2 #imgcontact_2,
+    #contact #contact_part2 #area_contact #contact_3 #imgcontact_3 {
+      width: 15%;
+      height: auto;
+    }
+    
+    #contact #contact_part2 #area_contact #contact_1 #namecontact_1,
+    #contact #contact_part2 #area_contact #contact_2 #namecontact_2,
+    #contact #contact_part2 #area_contact #contact_3 #namecontact_3 {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+  
+  /* Extra Extra small devices (small portrait phones, less than 380px) */
+  @media screen and (max-width: 380px) {
+    /* Base font adjustment */
+    html {
+      font-size: 12px;
+    }
+    
+    /* Introduction Section */
+    #Introduce #introduce_part1 #Meimg {
+      width: 50%;
+    }
+    
+    /* Skills Section */
+    #skills #part1_skills #button_skills #area_bu {
+      width: 90%;
+      gap: 0.5rem;
+    }
+    
+    #skills #part2_skills #area_technical #Technical_skills #boder_technical #tec_1,
+    #skills #part2_skills #area_technical #Technical_skills #boder_technical #tec_2,
+    #skills #part2_skills #area_technical #Technical_skills #boder_technical #tec_3,
+    #skills #part2_skills #area_tools #Tools #boder_tools #tools_1,
+    #skills #part2_skills #area_tools #Tools #boder_tools #tools_2,
+    #skills #part2_skills #area_tools #Tools #boder_tools #tools_3 {
+      width: 80%;
+    }
+    
+    /* Projects Section */
+    #myproject #part2_myproject #link_project1,
+    #myproject #part2_myproject #link_project2,
+    #myproject #part2_myproject #link_project3 {
+      width: 90%;
+    }
+  }
+  
+  /* ============ ADDITIONAL RESPONSIVE ENHANCEMENTS ============ */
+  
+  /* Add Touch-friendly targets for mobile */
+  @media (hover: none) and (pointer: coarse) {
+    /* Increase touch target size for buttons and links */
+    #bar_right #area_button a,
+    #button_technical, 
+    #button_tools,
+    #taga_github,
+    #link_project1,
+    #link_project2,
+    #link_project3 {
+      padding: 0.8rem !important;
+    }
+  }
+  
+  /* Improve performance on mobile devices */
+  @media screen and (max-width: 768px) {
+    /* Optimize animations for mobile */
+    .fade-in-section {
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+    
+    /* Disable hover effects that might cause performance issues */
+    #project1:hover,
+    #project2:hover,
+    #project3:hover,
+    #intro_img:hover {
+      transform: none;
+      transition: none;
+    }
+    
+    /* Show mobile-optimized animations instead */
+    #project1:active,
+    #project2:active,
+    #project3:active {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  /* Fix any potential overflow issues */
+  @media screen and (max-width: 576px) {
+    #part1text_aboutme, 
+    #part2text_aboutme,
+    #area_detailp1,
+    #area_detailp2,
+    #area_detailp3 {
+      width: 95% !important;
+      margin: 0 auto;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+    
+    #namecontact_1, 
+    #namecontact_2, 
+    #namecontact_3 {
+      word-break: break-all;
+    }
+  }
+  
+  /* ============ JS FALLBACK FOR BROWSERS THAT DON'T SUPPORT CSS FEATURES ============ */
+  /* This is a fallback in case the browser doesn't support modern CSS features like clamp() */
+  @supports not (font-size: clamp(1rem, 2vw, 3rem)) {
+    #mename {
+      font-size: 2rem !important;
+    }
+    
+    #front {
+      font-size: 1.5rem !important;
+    }
+    
+    @media screen and (max-width: 576px) {
+      #mename {
+        font-size: 1.5rem !important;
+      }
+      
+      #front {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+  
+  /* ============ PRINT STYLES ============ */
+  /* Optional: Add print styles for when someone wants to print your portfolio */
+  @media print {
+    body {
+      background-color: white !important;
+      color: black !important;
+    }
+    
+    #body_bar {
+      position: static !important;
+    }
+    
+    #mename, #front, #about, #head_educationn, #head_skills, #head_myproject, #contact_me {
+      color: black !important;
+      -webkit-text-fill-color: black !important;
+      background: none !important;
+    }
+    
+    img {
+      max-width: 300px !important;
+    }
+    
+    #contact #contact_part2 #area_contact #contact_1,
+    #contact #contact_part2 #area_contact #contact_2,
+    #contact #contact_part2 #area_contact #contact_3 {
+      border: 1px solid #ccc !important;
+      background: white !important;
+    }
+  }

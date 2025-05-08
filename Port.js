@@ -85,3 +85,23 @@ function showElement(type) {
 button_tec.addEventListener('click',()=>showElement('a'));
 button_tools.addEventListener('click',()=>showElement('b'));
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const faders = document.querySelectorAll('.fade-in-section');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible'); // ซ่อนเมื่อเลื่อนออก
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    faders.forEach(el => {
+      observer.observe(el);
+    });
+  });

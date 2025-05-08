@@ -64,14 +64,14 @@ let elementB = document.getElementById("area_tools");
 function showElement(type) {
    
   
-    // ซ่อนทุก element ก่อน
+    
     elementA.classList.remove('visible');
     elementA.classList.add('hidden');
   
     elementB.classList.remove('visible');
     elementB.classList.add('hidden');
   
-    // แสดงเฉพาะ element ที่ต้องการ
+   
     if (type === 'a') {
       elementA.classList.remove('hidden');
       elementA.classList.add('visible');
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
         } else {
-          entry.target.classList.remove('visible'); // ซ่อนเมื่อเลื่อนออก
+          entry.target.classList.remove('visible'); 
         }
       });
     }, {
